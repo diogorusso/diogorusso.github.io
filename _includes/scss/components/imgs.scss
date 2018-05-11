@@ -1,0 +1,25 @@
+
+// svg {
+//     width:100%;
+//     height: auto;
+//   }
+  
+  
+  // Images
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+
+  
+  .img-loaded{
+    background: #F3F3F3;
+    @include vendor-prefix('animation', 'fadein .5s');
+  }
+  
+  @include keyframes(fadein){
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  

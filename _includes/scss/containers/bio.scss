@@ -1,0 +1,73 @@
+.bio {
+    text-align: center;
+    display: block;
+
+    .description{
+        margin: 4.5rem auto 6rem auto;
+    }
+
+}
+.bio-wrap {
+    text-align: center;
+}
+.profile {
+    width: 50%;
+}
+
+
+.sign-wrap { 
+    width: 50%;
+    position:relative;
+    background:#f3f3f3;
+}
+
+.sign{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    @include translate(-50%, -50%);
+    p{
+        opacity: .5;
+    }
+}
+
+.d-sign{
+    width:185px;
+    max-height: 100px;
+    max-width: 100%;
+}
+
+
+
+@media #{$device-small} {
+    .bio{
+        .description{
+            max-width:375px;
+            margin: $gutter/2 auto $gutter auto;
+            padding: 0 1rem;
+        }
+    }
+
+    .profile {
+        width: 100%;
+    }
+    .sign-wrap{
+        width: 100%;
+    }
+    .sign{
+        padding-top:1rem;
+        min-height:10rem;
+        img{
+            height: 100%;
+        } 
+    }
+    .sign-bg{
+        min-height:11rem;
+     }
+
+     .d-sign{
+        width:125px;
+    }
+}
+

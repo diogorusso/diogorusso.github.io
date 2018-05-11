@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include containers/nav.html %}
+    <main>
+        {{ content}}
+    </main>
+    {% include containers/footer.html %}
+	<style>
+		{% capture include_to_scssify %}
+		{% include style.scss %}
+		{% endcapture %}
+		{{ include_to_scssify | scssify }}
+	</style>  
+	<script src="{{ site.static }}js/scripts.js" type="text/javascript" async></script>
+  </body>
+</html>
+
+

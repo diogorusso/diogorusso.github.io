@@ -1,0 +1,37 @@
+---
+sitemap:
+  exclude: 'yes'
+---
+/* PROJECT */
+
+	Site Name:   {{site.title}}
+	Site URL:    {{site.url}}{{site.baseurl}}
+	Created:     2018/04/01
+	Standards:   HTML5, CSS3
+	Components:  jQuery
+	Software:    Jekyll
+	Web Design:  {{site.author}}
+
+/* AUTHOR */
+
+	Name:       {{site.author}}
+	Nickname:   {{site.author}}
+	Title:      {{site.tile}}
+	Location:    São Paulo + San Francisco
+	Site:        {{site.url}}{{site.baseurl}}
+	Contact:     {{site.url}}{{site.baseurl}}
+
+/* SOCIAL */
+
+{% for item in site.social %}
+	{{item.title}}: {{ item.url }}
+{% endfor %}
+
+/* META */
+
+	Built with: Jekyll with love by {{site.author}}.
+	{{site.description}}
+
+/* THANKS */
+
+	To everyone!!!!

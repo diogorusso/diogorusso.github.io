@@ -1,0 +1,26 @@
+{
+  "name": "diogo-russo",
+  "version": "0.0.0",
+  "description": "Diogo Russo's JellyKit",
+  "keywords": [
+    "Diogo Russo",
+    "Jekyll"
+  ],
+  "author": "diogo russo",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.6.5",
+    "gulp-uglify": "^3.0.0",
+    "merge2": "^1.2.2",
+    "request": "^2.85.0",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

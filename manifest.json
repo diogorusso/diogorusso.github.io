@@ -1,0 +1,26 @@
+---
+---
+{
+    "lang": "en",
+    "dir": "ltr",
+    "name": "{{site.title}}. {{site.description}}",
+    "short_name": "{{site.author}}",
+    "start_url": "index.html?utm_source=homescreen",
+    "display": "standalone",
+    "orientation": "natural",
+    "scope" : "./",
+    "theme_color": "#fff",
+    "background_color": "#000",
+    "icons": [
+        {
+            "src": "{{site.cdn}}{{site.ic192x192}}",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "{{site.cdn}}{{site.ic512x512}}",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+  }

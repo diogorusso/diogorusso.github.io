@@ -1,0 +1,43 @@
+# Url
+url: https://www.diogorusso.com
+baseurl: ""
+
+# Exclude
+exclude: [gulpfile, package.json,package-lock.json, node_modules,Gemfile,Gemfile.lock, README.md]
+
+# Sass
+sass:
+  sass_dir: _includes/scss
+  style: :compressed
+
+
+# Info
+author: "Diogo Russo"
+title: "Diogo Russo - Product & Graphic Design"
+description: "I'm a designer, artist and storyteller, an optimist dedicated to help bringing ideas to life."
+# description: "I like sharing inspiration, resources and insights of what it takes to bring ideas to life."
+keywords: "Diogo Russo, Product Desig, UX Design, Graphic Design, Visual Arts"
+
+# Media CDN (cloudinary)
+cdn: https://res.cloudinary.com/diogorusso/image/upload/
+static: 'https://res.cloudinary.com/diogorusso/raw/upload/'
+profile: about/bio/diogorusso.jpg
+icIco: favicon.ico #root folder
+icSvg: favicon.svg #root folder
+ic512x512: favicons/icon-512x512.png
+ic310x310: favicons/icon-310x310.png
+ic192x192: favicons/icon-192x192.png
+ic180x180: favicons/icon-180x180.png
+ic150x150: favicons/icon-150x150.png
+ic144x144: favicons/icon-144x144.png
+ic70x70: favicons/icon-70x70.png
+ic310x150: favicons/icon-310x150.png
+
+# Social Profiles
+social:
+  - title: linkedin
+    url: "https://www.linkedin.com/in/diogorusso/?locale=en_US"
+  - title: behance
+    url: "https://www.behance.net/diogorusso"
+  - title: instagram
+    url: "https://www.instagram.com/diogorusso/"

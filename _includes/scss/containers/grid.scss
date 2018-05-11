@@ -1,0 +1,16 @@
+.grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    @mixin column($width) {
+        flex: 0 1 calc(#{$width} - #{$gutter});
+        @media #{$device-medium} {
+            flex: 0 1 calc(50% - #{$gutter}); 
+        }
+        @media #{$device-small} {
+            flex: 0 1 100%; 
+        }
+    }
+    .cols-2{
+        @include column("50%");
+    }
+}

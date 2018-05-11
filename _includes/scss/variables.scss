@@ -1,0 +1,27 @@
+
+// devices
+$device-x-small:"screen and (max-width: 375px)";
+$device-small:"screen and (max-width: 767px)";
+$device-small-landscape: "screen and (max-width: 767px) and (orientation: landscape)";
+$device-medium: "screen and (max-width: 1023px) and (min-width:768px)";
+$device-medium-small: "screen and ( max-width: 1023px)";
+$device-large:"screen and (min-width: 1024px)";
+
+// fonts
+$font-serif: "Verdana",serif;
+$font-sans-serif: "Helvetica Neue", sans-serif;
+
+// colors
+$dark: black;
+$mid: rgba( $dark, .65 );
+$mid-light: rgba( $dark, .15 );
+$light: white;
+
+$site-bg: $light; 
+$nav-bg: rgba( $light, .9 );
+$card-shadow: rgba( $dark, .06 );
+
+// layout
+$gutter: 3rem;
+$box: 95%;
+
