@@ -13,9 +13,9 @@
     box-sizing: border-box;
     border: solid 1px;
     &:hover{
-      background-color: black;
-      color: white;
-      border: solid 1px black;
+      background-color: $dark;
+      color: $light;
+      border: solid 1px $dark;
       
     }
   }

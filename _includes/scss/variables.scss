@@ -1,4 +1,3 @@
-
 // devices
 $device-x-small:"screen and (max-width: 375px)";
 $device-small:"screen and (max-width: 767px)";
@@ -12,10 +11,10 @@ $font-serif: "Verdana",serif;
 $font-sans-serif: "Helvetica Neue", sans-serif;
 
 // colors
-$dark: black;
+$dark: #151515;
 $mid: rgba( $dark, .65 );
 $mid-light: rgba( $dark, .15 );
-$light: white;
+$light: #FCFCFC;
 
 $site-bg: $light; 
 $nav-bg: rgba( $light, .9 );

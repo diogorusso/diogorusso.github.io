@@ -20,6 +20,9 @@
 ; 
 }
 
+
+
+
 .masthead{
   height:100vh;
   width: 100%; 
@@ -28,13 +31,13 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-  @include mastheadAboutBg;
-  background-position: center;
+  background:$dark;
   z-index: 1;
 
   .masthead-wrap{
     padding: 0 1rem;
-    z-index: 3;
+    opacity: .8;
+
   }
   a{
     color: $light;
@@ -42,14 +45,16 @@
   }
   h1{
     font-size: 3rem;
-    text-shadow: #50002c 4px 6px 9px;
   }
 
   h2{
     font-family: $font-sans-serif;
     font-size: 2rem;
     font-weight: 200;
-    text-shadow: #400050 3px 3px 3px;
+  }
+  h3{
+    font-size: 1.35rem;
+    color: #828282;
   }
 }
 
@@ -57,6 +62,7 @@
   width: 14px;
   display: block;
   margin: 10px auto;
+  font-size:2.5rem;
   animation: bounceArrow .35s ease-in alternate infinite;
 }
 
@@ -65,12 +71,11 @@
   bottom:10%; 
   left:50%; 
   @include translate(-50%, 0);
-  opacity:.5;
   z-index: 3;
 }
 
 .center-content{
-  width:60%;
+  width:75%;
   max-width: 635px;
   z-index: 2;
   position: absolute;
@@ -80,25 +85,20 @@
 }
 
 
-@media #{$device-medium} {
-  .masthead-wrap{
-    width:70%;
-  }
-}
-
-
 @media #{$device-small} {
   .masthead{
-    @include mastheadAboutBgSmall;
+    // @include mastheadAboutBgSmall;
     text-align: center;
     h1{
-      font-size: 2rem;
-      text-shadow: #400050 3px 4px 5px;
+      font-size: 1.75rem;
     }
   
     h2{
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 300;
+    }
+    h3{
+      font-size: 1.2rem;
     }
   }
 
@@ -107,7 +107,6 @@
     bottom:15%; 
     left:50%; 
     @include translate(-50%, 0);
-    opacity:.5;
   }
   .center-content{
     width:95%;
@@ -115,9 +114,10 @@
   }
 }
 
+
 @media #{$device-small-landscape} {
   .center-content{
-    width:50%;
+    width:70%;
     top:45%;
   }
   .masthead{
@@ -133,7 +133,6 @@
   .arrow-wrap{
     position:absolute; 
     bottom:2.15rem; 
-    opacity:.5;
   }
 
 }

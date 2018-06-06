@@ -1,6 +1,8 @@
 .portfolio-title{
     margin: 4.5rem 0;
     text-align:center;
+    max-width:575px;
+    margin: $gutter*1.5 auto;
 }
 
 .portfolio-item{
@@ -12,12 +14,12 @@
     .content {
         padding: calc(#{$gutter} / 2);
         text-align: center;
-        h2{
+        h3{
             font-size: 1.4rem;
             -webkit-margin-before: 0;
             -webkit-margin-after: .75rem;
         }
-        small{
+        p{
             color: $dark;
             text-transform: uppercase;
             font-size: .9rem;

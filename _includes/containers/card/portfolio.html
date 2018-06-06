@@ -3,10 +3,10 @@
         <img src="{% include img/loader.html %}" data-src="{{ site.cdn }}work/{{ include.thumb }}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}">
         <noscript><img src="{{ site.cdn }}work/{{ include.thumb }}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}"></noscript>
         <div class="content">
-            <h2>{{ include.title }}</h2>
-            <small>
+            <h3>{{ include.title }}</h3>
+            <p>
                 {{ include.category }}
-            </small>
+            </p>
         </div>
     </a>
 </article>
