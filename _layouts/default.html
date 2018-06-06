@@ -13,7 +13,9 @@
 		{% endcapture %}
 		{{ include_to_scssify | scssify }}
 	</style>  
-	<script src="{{ site.static }}js/scripts.js" type="text/javascript" async></script>
+	<script type="text/javascript" async>
+     {% include scripts.js %}
+  </script>
   </body>
 </html>
 

@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var runSequence = require('run-sequence');
+
 var clean = require('gulp-clean');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync').create();
@@ -39,7 +41,7 @@ gulp.task('js', function() {
       .pipe(buffer())                                               
       .pipe(concat('scripts.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('assets/js/'));
+      .pipe(gulp.dest('_includes'));
 });
 
 
@@ -66,7 +68,7 @@ gulp.task('serve', function () {
         '_config.dev.yml',
         './**/**/**/*.html',
         './**/**/*.md',
-        './assets/js/scripts.js',
+        './_includes/scripts.js',
         './**/**/*.scss',
         '!./_site/', 
     ],
@@ -74,10 +76,11 @@ gulp.task('serve', function () {
 });
 
 gulp.task('default', 
-    [
-        'clean',
-        'js',
-        'jekyll', 
-        'serve'
-    ]
+    function(callback) {
+        runSequence(
+            'clean', 'js',
+            ['jekyll','serve'],
+            callback
+        );
+    }
 );

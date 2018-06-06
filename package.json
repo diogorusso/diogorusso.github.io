@@ -21,6 +21,10 @@
     "gulp-uglify": "^3.0.0",
     "merge2": "^1.2.2",
     "request": "^2.85.0",
+    "run-sequence": "^2.2.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "npm": "^6.1.0"
   }
 }
