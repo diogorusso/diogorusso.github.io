@@ -13,7 +13,7 @@ sass:
 
 # Info
 author: "Diogo Russo"
-title: "Diogo Russo - Product Design and Artwork"
+title: "Diogo Russo - UX + Product Design"
 description: "I'm a designer, artist and storyteller, an optimist dedicated to help bringing ideas to life."
 # description: "I like sharing inspiration, resources and insights of what it takes to bring ideas to life."
 keywords: "Diogo Russo, Product Desig, UX Design, Graphic Design, Visual Arts"
@@ -35,9 +35,28 @@ ic310x150: favicons/icon-310x150.png
 
 # Social Profiles
 social:
-  - title: linkedin
-    url: "https://www.linkedin.com/in/diogorusso/?locale=en_US"
   - title: behance
     url: "https://www.behance.net/diogorusso"
+  - title: linkedin
+    url: "https://www.linkedin.com/in/diogorusso/?locale=en_US"
   - title: instagram
     url: "https://www.instagram.com/diogorusso/"
+
+#  post permalink
+permalink: /:categories/:slug
+
+# collections:
+#   design:
+#     output: true
+#     # permalink: /design/:path
+#   work:
+#     output: true
+
+#     permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "work"
+    values:
+      layout: default

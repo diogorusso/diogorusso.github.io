@@ -24,13 +24,13 @@ gulp.task('clean', function () {
 gulp.task('js', function() {
 
     var jquery = request('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js') 
-      .pipe(source('jquery.js'));
+    .pipe(source('jquery.js'));
 
     var lazyLoad = request('https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js') 
     .pipe(source('lazyLoad.js'));   
 
     var jQeasing = request('https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js') 
-      .pipe(source('jQeasing.js'));
+    .pipe(source('jQeasing.js'));
 
     var slickSlider = request('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js') 
     .pipe(source('slickSlider.js'));
@@ -38,10 +38,10 @@ gulp.task('js', function() {
     var myScripts =  gulp.src('_includes/js/**/*.js');                                 
   
     return merge(jquery,jQeasing, lazyLoad, slickSlider,myScripts)                                      
-      .pipe(buffer())                                               
-      .pipe(concat('scripts.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('_includes'));
+    .pipe(buffer())                                               
+    .pipe(concat('scripts.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_includes'));
 });
 
 
@@ -66,7 +66,7 @@ gulp.task('serve', function () {
     gulp.watch([
         '_config.yml',
         '_config.dev.yml',
-        './**/**/**/*.html',
+        './**/**/*.html',
         './**/**/*.md',
         './_includes/scripts.js',
         './**/**/*.scss',
@@ -78,7 +78,7 @@ gulp.task('serve', function () {
 gulp.task('default', 
     function(callback) {
         runSequence(
-            'clean', 'js',
+            'clean', ['js'],
             ['jekyll','serve'],
             callback
         );

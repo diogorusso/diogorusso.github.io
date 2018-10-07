@@ -49,12 +49,12 @@
 
   h2{
     font-family: $font-sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 200;
   }
   h3{
-    font-size: 1.35rem;
-    color: #828282;
+    font-size: 1.5rem;
+    color: #dbdbdb;
   }
 }
 
@@ -76,7 +76,7 @@
 
 .center-content{
   width:75%;
-  max-width: 635px;
+  max-width: 575px;
   z-index: 2;
   position: absolute;
   left: 50%;

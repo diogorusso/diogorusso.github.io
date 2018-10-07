@@ -13,4 +13,7 @@
     .cols-2{
         @include column("50%");
     }
+    .cols-3{
+        @include column("33%");
+    }
 }

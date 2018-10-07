@@ -3,7 +3,18 @@ layout: default
 title: About
 cover: "about/cover.jpg"
 ---
-{% include containers/masthead/about.html %}
-{% include containers/bio.html %}
-{% include containers/process.html %}
-{% include containers/portfolio.html %}
+{% include containers/hero/minimal.html 
+        title="hi, I'm Diogo Russo"
+        subtitle="UX & Product Design"
+        legend="working at climate.com"
+        anchor="bio" 
+%}
+<a id="bio"></a>
+<div class="bio">
+        <div class="bio-wrap">
+                {% include components/bio/profile.html %}
+                {% include components/bio/description.html %}
+        </div>
+</div>
+{% include content/design/process.html %}
+{% include content/projects/featured.html %}

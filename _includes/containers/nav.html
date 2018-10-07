@@ -1,11 +1,11 @@
 <nav class="nav" role="navigation">
     <a href="{{ site.baseurl}}/" class="logo" aria-label="Main Page">
-        {% include img/d-logo.html %}
+        {% include img/d-logo.svg %}
     </a>
     <ul>
         <li><a {% if page.title contains "About" %}class="active"{% endif %} href="{{site.baseurl}}/">About</a></li>
-        <li><a href="http://work.diogorusso.com" target="_blank" rel="noopener">Work</a></li>
-        <li><a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" target="_blank" rel="noopener" aria-label="Linkedin">{% include img/social/linkedin.html %}</a></li>
-
+        <!-- <li><a {% if page.title contains "Work" %}class="active"{% endif %} href="{{ site.baseurl}}/work">Work</a></li> -->
+        <li><a href="https://work.diogorusso.com" aria-label="Work">Work</a></li>
+        <li><a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" target="_blank" rel="noopener" aria-label="Linkedin">{% include img/social/linkedin-box.svg %}</a></li>
     </ul>
 </nav>
