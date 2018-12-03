@@ -1,0 +1,189 @@
+process.setMaxListeners(Infinity); // <== Important line
+
+var gulp = require('gulp');
+var runSequence = require('run-sequence');
+
+var clean = require('gulp-clean');
+var shell = require('gulp-shell');
+var browserSync = require('browser-sync').create();
+
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+
+var source = require('vinyl-source-stream');
+var request = require('request');
+var merge = require('merge2');
+
+var buffer = require('gulp-buffer');
+
+gulp.task('clean-site', function () {
+    return gulp.src(['_site/'], {
+            read: false
+        })
+        .pipe(clean());
+});
+
+gulp.task('js-about', function () {
+
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+    var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
+    var siteScripts = gulp.src('_includes/js/site/**/*.js');
+    var aboutScripts = gulp.src('_includes/js/about/**/*.js');
+
+    return merge(
+            jquery, 
+            jQeasing, 
+            lazyLoad, 
+            slickSlider, 
+            siteScripts, 
+            aboutScripts)
+        .pipe(buffer())
+        .pipe(concat('about.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/scripts'));
+});
+
+gulp.task('js-design', function () {
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+    var mustache = gulp.src('node_modules/mustache/mustache.js');
+    var instaFeed = request('https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js')
+        .pipe(source('instaFeed.js'));
+    var siteScripts = gulp.src('_includes/js/site/**/*.js');
+    var homeScripts = gulp.src('_includes/js/home/**/*.js');
+    var behanceProjects = gulp.src('_includes/js/behanceProjects.js');
+
+    return merge(
+            jquery,
+            jQeasing,
+            lazyLoad,
+            mustache,
+            siteScripts,
+            behanceProjects)
+        .pipe(buffer())
+        .pipe(concat('design.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/scripts'));
+});
+
+gulp.task('js-art', function () {
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+    var instaFeed = request('https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js')
+        .pipe(source('instaFeed.js'));
+    var siteScripts = gulp.src('_includes/js/site/**/*.js');
+    var siteInstaFeed = gulp.src('_includes/js/myInstaFeed.js');
+
+    return merge(
+        instaFeed,
+        jquery,
+        jQeasing,
+        lazyLoad,
+        siteScripts,
+        siteInstaFeed)
+        .pipe(buffer())
+        .pipe(concat('art.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/scripts'));
+});
+
+gulp.task('js-post', function () {
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+   var siteScripts = gulp.src('_includes/js/site/**/*.js');
+    var prototypesDemo = gulp.src('_includes/js/prototypesDemo.js');
+
+    return merge(
+        jquery,
+        jQeasing,
+        lazyLoad,
+        siteScripts,
+        prototypesDemo)
+        .pipe(buffer())
+        .pipe(concat('post.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/scripts'));
+});
+
+gulp.task('js-work', function () {
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+   var siteScripts = gulp.src('_includes/js/site/**/*.js');
+
+    return merge(
+        jquery,
+        jQeasing,
+        lazyLoad,
+        siteScripts)
+        .pipe(buffer())
+        .pipe(concat('work.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/scripts'));
+});
+
+gulp.task('clean-js', function () {
+    return gulp.src(['assets/scripts'], {
+            read: false
+        })
+        .pipe(clean());
+});
+
+gulp.task('js',function (callback) {
+    runSequence(
+        'clean-js',
+        'js-about', 
+        'js-design',
+        'js-art',
+        'js-work',
+        'js-post',
+        callback
+    );
+});
+
+
+gulp.task('jekyll', shell.task(['bundle exec jekyll build --config "_config.yml,_config.dev.yml"']));
+
+gulp.task('jekyll-rebuild', ['jekyll'], function () {
+    browserSync.reload();
+});
+
+gulp.task('serve', function () {
+    browserSync.init({
+        logConnections: true,
+        port:1818,
+        https: true,
+        server: {
+            baseDir: '_site/',
+
+        }
+    });
+    // Reloads page when some of the already built files changed:
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+    gulp.watch(['./_includes/scripts.js'], ['js']);
+    gulp.watch([
+            '_config.yml',
+            '_config.dev.yml',
+            './**/**/**/*.html',
+            './**/**/*.md',
+            './assets/scripts/*.js',
+            './**/**/*.scss',
+            '!./_site/',
+        ],
+        ['jekyll-rebuild']);
+});
+
+gulp.task('default',function (callback) {
+    runSequence(
+        'clean-site',
+        'js',
+        'jekyll', 'serve',
+        callback
+    );
+});

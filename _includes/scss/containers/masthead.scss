@@ -37,6 +37,7 @@
   .masthead-wrap{
     padding: 0 1rem;
     opacity: .8;
+    max-width: 575px;
 
   }
   a{
@@ -76,7 +77,6 @@
 
 .center-content{
   width:75%;
-  max-width: 575px;
   z-index: 2;
   position: absolute;
   left: 50%;

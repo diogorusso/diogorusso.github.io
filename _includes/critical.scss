@@ -5,19 +5,20 @@
 // Base
 @import "base";
 
-// components
-@import "components/imgs";
-@import "components/type";
-@import "components/links";
+// Blocks
+@import "blocks/imgs";
+@import "blocks/typography";
+@import "blocks/links";
+@import "blocks/bio";
 
 //Containers
 @import "containers/nav";
 @import "containers/masthead";
-@import "containers/bio";
-
 @import "containers/box";
 @import "containers/grid";
-@import "containers/process";
+
+// Content
+@import "content/design/process";
 
 
 

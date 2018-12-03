@@ -10,10 +10,20 @@
             flex: 0 1 100%; 
         }
     }
+
+    @mixin column3($width) {
+        flex: 0 1 calc(#{$width} - #{$gutter});
+        @media #{$device-medium} {
+            flex: 0 1 calc($width - #{$gutter}); 
+        }
+        @media #{$device-small} {
+            flex: 0 1 100%; 
+        }
+    }
     .cols-2{
         @include column("50%");
     }
     .cols-3{
-        @include column("33%");
+        @include column3("33%");
     }
 }

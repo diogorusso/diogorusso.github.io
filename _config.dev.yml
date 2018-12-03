@@ -1,4 +1,4 @@
 url: ""
-baseurl: ""
+baseurl: "https://localhost:1818"
 cdn: /assets/
 static: /assets/

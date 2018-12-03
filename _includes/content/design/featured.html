@@ -1,49 +1,42 @@
 <div class="box">
         <div class="portfolio-title">
                 <h2>Work & Play</h2>
-                <h3>I'm an an optimist dedicated to help bringging projects to life.I have fun making things and sharing ideas.</h3>
+                <h3>I'm an an optimist dedicated to help bringing projects to life.I have fun making things and sharing ideas.</h3>
         </div>
-
-        <div class="grid-flex">
-                {% include containers/card/portfolio.html 
-                        url="https://www.behance.net/gallery/36828271/LaunchPad" 
-                        title="LaunchPad UX" 
-                        category="UI/UX, Product Design" 
-                        thumb="launchpad-w624h351.jpg" 
-                %}
-                {% include containers/card/portfolio.html 
-                        url="https://www.behance.net/gallery/22949811/FWC-2014-Coca-Cola" 
-                        title="World Cup Brazil" 
-                        category="Creative Direction, Film, Photography" 
-                        thumb="Coca-Cola_FWC_14-w624h351.jpg" 
-                %}
-                {% include containers/card/portfolio.html 
-                        url="https://www.behance.net/gallery/38479985/Kenner-IxD-Motion" 
-                        title="Kenner IxD & Video" 
-                        category="Creative Direction, Interaction Design" 
-                        thumb="Kenner_Music_case-w624h351.jpg" 
-                %}
-                {% include containers/card/portfolio.html 
-                        url="https://www.behance.net/gallery/36828873/FOODTOPIA" 
-                        title="FOODTOPIA xD" 
-                        category="UI/UX, Product Design" 
-                        thumb="foodtopia-w624h351.jpg" 
-                %}
-                {% include containers/card/portfolio.html 
-                        url="https://www.behance.net/gallery/38488527/Webdesign-for-Business" 
-                        title="Wordpress for Business" 
-                        category="UI/UX, Web Design" 
-                        thumb="website-w624h351.jpg" 
-                %}
-                {% include containers/card/portfolio.html 
-                        url="https://www.behance.net/gallery/23074515/Escola-SESC-ID" 
-                        title="SESC School ID" 
-                        category="Branding, Graphic Design" 
-                        thumb="escola_Sesc-w624h351.jpg" 
-                %}
+                
+        <div id="behance-magix" class="grid-flex">
+                <!-- insert some HTML via magic JS -->
+                <!-- this shows something here even if JS doesn't load -->
+                <img src="https://unsplash.it/1200/600/?random" />
+                <p>This will be erased when javascript draws our new content. But, you can also put other things here incase the behance API is down or for some other reason the javascript doesn't run/load.</p>
+                {%raw%}
+                <script id="project-cards" type="text/template">
+                        {{#projects}}
+                        <article class="card cols-3">
+                                <a href="{{url}}" id="b{{id}}" target="_blank">
+                                <div class="image-frame">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWl
+        naHQ9IjEwODAiIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiPgogIDxyZWN0IHdpZHRoPSIxOTIwIi
+        BoZWlnaHQ9IjEwODAiIHg9IjI3MyIgeT0iNDQyIiBmaWxsPSIjRjNGM0YzIiBmaWxsLXJ1bGU9I
+        mV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzMgLTQ0MikiLz4KPC9zdmc+Cg==" data-src="{{covers.404}}" alt="{{name}}">
+                <noscript><img src="{{ site.cdn }}work/{{ include.thumb }}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}"></noscript>
+                                </div>
+                                <div class="content">
+                                        <h3>{{name}}</h3>
+                                        <small>
+                                        {{#fields}}
+                                        <span class="tag">{{ . }}</span>
+                                        {{/fields}}
+                                        </small>
+                                </div>
+                                </a>
+                        </article>
+                        {{/projects}}
+                        </script>
+                {%endraw%}
         </div>
         <div class="more-projects">
                 <h2>Want to See More?</h2>
-                <a href="http://work.diogorusso.com/" class="button" target="_blank" rel="noopener">view my work</a>
+                <a href="{{ site.baseurl}}/design/" class="button">view my work</a>
         </div>
 </div>
