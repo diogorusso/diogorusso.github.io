@@ -10,20 +10,20 @@ subtitle="UX & Product Design"
 legend="working at climate.com"
 anchor="bio"
 %} {% endcomment %}
-{% include containers/hero/minimal.html
-title="hi, I'm Diogo Russo"
-subtitle="UX & Product Design"
-anchor="bio"
+{% include components/containers/hero/minimal.html
+        title="hi, I'm Diogo Russo"
+        subtitle="UX & Product Design"
+        anchor="bio"
 %}
 <a id="bio"></a>
 <div class="bio">
         <div class="bio-wrap">
-                {% include blocks/bio/profile.html %}
-                {% include blocks/bio/description.html %}
+                {% include components/content/bio/profile.html %}
+                {% include components/content/bio/description.html %}
         </div>
 </div>
 
-{% include content/work/climate.html %}
-{% include content/work/featured.html %}
+{% include components/content/work/climate.html %}
+{% include components/content/work/featured.html %}
 <br/><br/><br/><br/><br/>
-{% include content/design/process.html %}
+{% include components/content/design/process.html %}

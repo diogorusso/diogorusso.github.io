@@ -9,23 +9,24 @@ var merge = require('merge2');
 var buffer = require('gulp-buffer');
 
 gulp.task('js-design', function () {
-  var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
-  var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
-  var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
-  var mustache = gulp.src('node_modules/mustache/mustache.js');
-  var instaFeed = request('https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js')
-      .pipe(source('instaFeed.js'));
-  var siteScripts = gulp.src('_includes/js/site/**/*.js');
-  var homeScripts = gulp.src('_includes/js/home/**/*.js');
-  var behanceProjects = gulp.src('_includes/js/behanceProjects.js');
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+    var mustache = gulp.src('node_modules/mustache/mustache.js');
+    var pageScroll = gulp.src('_includes/js/pageScroll.js');
+    var navScript = gulp.src('_includes/components/containers/nav/nav.js');
+    var behanceProjects = gulp.src('_includes/components/content/design/behanceProjects.js');
+    var gA = gulp.src('_includes/js/g-analytics.js');
 
   return merge(
           jquery,
           jQeasing,
           lazyLoad,
           mustache,
-          siteScripts,
-          behanceProjects)
+          pageScroll,
+          navScript,
+          behanceProjects,
+          gA)
       .pipe(buffer())
       .pipe(concat('design.js'))
       .pipe(uglify())

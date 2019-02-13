@@ -1,0 +1,48 @@
+---
+layout: site/default
+script: design
+---
+{% include components/containers/hero/minimal.html 
+  title="UX + Product Design"
+  legend="working at Climate Corporation"
+  anchor="bio" 
+%}
+{% comment %} 
+<ul>
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for post in category.last %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+<ul>
+    {% for post in site.posts %}
+    {% if post.categories contains 'design' %}
+    <li>{{ post.title }}</li>
+    {% endif %}
+  {% endfor %}
+</ul> 
+{% endcomment %}
+
+{% include components/content/design/featured.html %}
+
+<a id="bio"></a>
+<div class="bio">
+  <div class="bio-wrap">
+          {% include components/content/bio/profile.html %}
+  </div>
+</div>
+

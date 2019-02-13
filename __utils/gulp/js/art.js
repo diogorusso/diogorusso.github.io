@@ -9,23 +9,28 @@ var merge = require('merge2');
 var buffer = require('gulp-buffer');
 
 gulp.task('js-art', function () {
-  var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
-  var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
-  var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
-  var instaFeed = request('https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js')
-      .pipe(source('instaFeed.js'));
-  var siteScripts = gulp.src('_includes/js/site/**/*.js');
-  var siteInstaFeed = gulp.src('_includes/js/myInstaFeed.js');
+    var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
+    var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+    var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+    var instaFeed = request('https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js')
+        .pipe(source('instaFeed.js'));
+    var pageScroll = gulp.src('_includes/js/pageScroll.js');
+    var navScript = gulp.src('_includes/components/containers/nav/nav.js');
+    var InstaFeedscript = gulp.src('_includes/components/content/art/myInstaFeed.js');
+    var gA = gulp.src('_includes/js/g-analytics.js');
 
-  return merge(
-      instaFeed,
-      jquery,
-      jQeasing,
-      lazyLoad,
-      siteScripts,
-      siteInstaFeed)
-      .pipe(buffer())
-      .pipe(concat('art.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('assets/scripts'));
+return merge(
+    instaFeed,
+    jquery,
+    jQeasing,
+    lazyLoad,
+    instaFeed,
+    pageScroll,
+    navScript,
+    InstaFeedscript,
+    gA)
+    .pipe(buffer())
+    .pipe(concat('art.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/scripts'));
 });

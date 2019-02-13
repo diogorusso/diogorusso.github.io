@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head/site.html %}
+  {% include head/site/_main.html %}
   <body>
-    {% include containers/nav.html %}
+    {% include components/containers/nav/nav.html %}
     <main>
         {{ content}}
     </main>
-    {% include containers/footer.html %}
+    {% include components/containers/footer/footer.html %}
 	<style>
 		{% capture include_to_scssify %}
 		{% include main.scss %}

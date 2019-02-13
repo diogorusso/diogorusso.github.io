@@ -4,7 +4,7 @@ baseurl: ""
 
 # Sass
 sass:
-  sass_dir: _includes/scss
+  sass_dir: _includes/
   style: :compressed
 
 
@@ -84,6 +84,7 @@ exclude: [
   Gemfile.lock,
   "LICENSE", 
   README.md,
+  Rakefile
   "assets/reveal.js/test",
   "assets/reveal.js/index.html",
   "assets/reveal.js/README.md",

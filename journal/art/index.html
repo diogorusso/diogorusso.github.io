@@ -1,0 +1,20 @@
+---
+layout: site/default
+script: art
+---
+{% include components/containers/hero/minimal.html 
+  title="Artwork"
+  legend="tropicool arts"
+  anchor="bio" 
+%}
+
+<br><br>
+{% include components/content/art/featured.html %}
+
+
+<a id="bio"></a>
+<div class="bio">
+  <div class="bio-wrap">
+    {% include components/content/bio/profile.html %}
+  </div>
+</div>

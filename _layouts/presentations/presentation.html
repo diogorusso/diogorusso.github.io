@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="{% if site.solarized.theme %}{{site.solarized.theme}}{% else %}dark{% endif %}">
 <head>
-  {% include head/presentations.html %}
+  {% include head/presentations/_main.html %}
 </head>
 <body>
 	<div class="reveal">
@@ -9,7 +9,7 @@
 			{{ content }}
 		</div>
 	</div>
-	{% include content/presentations/script.html %}
+	{% include components/content/presentations/script.html %}
 </body>
 </html>
 

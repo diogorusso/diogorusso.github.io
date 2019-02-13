@@ -12,15 +12,17 @@ gulp.task('js-post', function () {
   var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
   var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
   var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
- var siteScripts = gulp.src('_includes/js/site/**/*.js');
-  var prototypesDemo = gulp.src('_includes/js/prototypesDemo.js');
+  var pageScroll = gulp.src('_includes/js/pageScroll.js');
+  var navScript = gulp.src('_includes/components/containers/nav/nav.js');
+  var prototypesScript = gulp.src('_includes/components/content/prototypes/prototypes.js');
 
   return merge(
       jquery,
       jQeasing,
       lazyLoad,
-      siteScripts,
-      prototypesDemo)
+      pageScroll,
+      navScript,
+      prototypesScript)
       .pipe(buffer())
       .pipe(concat('post.js'))
       .pipe(uglify())

@@ -1,22 +1,17 @@
 // Variables
-@import "variables";
-@import "mixins";
-
-// vendor
-@import "vendor/slick";
+@import "scss/variables";
+@import "scss/mixins";
 
 //Containers
-@import "containers/card";
-@import "containers/portfolio-item";
+@import "components/containers/card/card";
+@import "components/containers/card/portfolio";
 
 // footer
-@import "containers/footer";
+@import "components/containers/footer/footer";
 
 // Components
-@import "blocks/buttons";
+@import "components/base/button/button";
 
 // Content
-@import "content/work/climate";
-
-// Device Demo
-@import "content/prototypes/devices";
+@import "scss/vendor/slick";
+@import "components/content/work/climate";

@@ -1,5 +1,6 @@
-@import "vendor/reveal.js/solarized/solarized.scss";
-// Device Demo
-@import "variables";
-@import "mixins";
-@import "content/prototypes/devices";
+// Variables
+@import "scss/variables";
+@import "scss/mixins";
+
+// vendor
+@import "scss/vendor/reveal.js/solarized/solarized.scss";

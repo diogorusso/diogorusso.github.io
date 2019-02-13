@@ -4,7 +4,7 @@ layout: presentations/presentation
 
 {% for post in site.posts  reversed %}
   {% if post.categories contains 'presentations' %}
-	{% include containers/slide.html %}
+	{% include components/content/presentations/slide.html %}
 	<div class="page-break"></div>
   {% endif %}
 {% endfor %}
