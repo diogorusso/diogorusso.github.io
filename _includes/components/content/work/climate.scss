@@ -21,8 +21,12 @@
   }
   .button-climate{
     border:  white solid 1px;
-    color: #456623;
     background: white;
     margin-top: 2rem;
+    box-shadow: 0 5px 25px rgba(21,21,21,0.15);
+    &:hover{
+      background:$dark;
+      border: $dark solid 1px;
+    }
   }
 }

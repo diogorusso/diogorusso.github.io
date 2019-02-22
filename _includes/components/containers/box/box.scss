@@ -8,6 +8,7 @@
     padding: 0 $gutter;
     height: 100%;
     position: relative;
+    width:90%;
     max-width: $width;
     margin: 0 auto;    
 }
@@ -19,5 +20,6 @@
 @media #{$device-small} {
     .box{
         padding: 0 1rem;
+        width:100%;
     }
 }
