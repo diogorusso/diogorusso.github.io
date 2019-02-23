@@ -1,12 +1,7 @@
 ---
-layout: site/default
+layout: site/sidebar
 script: design
 ---
-{% include components/containers/hero/minimal.html 
-  title="UX + Product Design"
-  legend="working at Climate Corporation"
-  anchor="bio" 
-%}
 {% comment %} 
 <ul>
 {% for category in site.categories %}
@@ -38,11 +33,3 @@ script: design
 {% endcomment %}
 
 {% include components/content/design/featured.html %}
-
-<a id="bio"></a>
-<div class="bio">
-  <div class="bio-wrap">
-          {% include components/content/bio/profile.html %}
-  </div>
-</div>
-
