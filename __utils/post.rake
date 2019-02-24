@@ -4,7 +4,8 @@ namespace :gen do
   task :post do
     err_mes = "Must specificy post TITLE, e.g., rake gen:post TITLE='This is a Sample Title'"
     raise err_mes unless ENV.has_key?('TITLE')
-    post_title = ENV['TITLE'].camelize
+    post_title = ENV['TITLE']
+    post_slug = ENV['SLUG']
     post_category = ENV['CATEGORY'].camelize
     post_tagline = ENV['TAGLINE'].camelize
     post_description = ENV['DESCRIPTION']
@@ -12,7 +13,7 @@ namespace :gen do
     post_cover = ENV['COVER']
     date = ENV['D'] || Date.today.to_s
     base_filename = ENV['FN'] || ENV['TITLE'].downcase.gsub(/\s+/, "-")
-    post_filename = date + "_" + base_filename + ".markdown"
+    post_filename = date + "-" + base_filename + ".md"
     post_dist=ENV['DIST']
     post_path = APP_ROOT.join(post_dist, post_filename)
     file_exists_mes = "ERROR: post file '#{post_path}' already exists"
@@ -27,14 +28,15 @@ namespace :gen do
     File.open(post_path, 'w+') do |f|
       f.write(<<-EOF.strip_heredoc)
 ---
-layout: post_simple
-category:  "#{post_category}"
-title:  "#{post_title}"
+layout: "site/post"
+script: about
+slug: "#{post_slug}"
+category: "#{post_category}"
+title: "#{post_title}"
 link: "#{post_link}"
-cover:  "#{post_cover}"
-date:   #{date}
+cover: "#{post_cover}"
+date: #{date}
 author: "Diogo Russo"
-tagline:   "#{post_tagline}"
 description: "#{post_description}"
 tags:
 #{tag_str}

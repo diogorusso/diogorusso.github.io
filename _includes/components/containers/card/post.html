@@ -1,22 +1,23 @@
-<article class="card {{ include.class }} {% for cat in post.categories%}{{ cat }} {% endfor %}">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-        <img src="{{ site.preloader }}" data-src="{{site.cdn}}journal/{{ post.cover }}">
-        <div class="content">
-            <small>
-                {% capture test_cat %}{{ post.categories[3] }}{% endcapture %}
-                {% if test_cat !='' %}
-                    {{ post.categories[3] | replace: "-", " " }}
-                {% else %}
-                    {{ post.categories[2] | replace: "-", " " }}
-                {% endif %}
-                {% capture test_cat %}{{ post.categories[2] }}{% endcapture %}
-                {% if test_cat !='' %}
-                {% else %}
-                    {{ post.categories[1] | replace: "-", " " }}
-                {% endif %}
-            </small>
-            <h3>{{ post.title | truncate: 50, '...' }}</h3>
-        </div>
-    </a>
-</article>
-
+<div class="col-xs-12 col-sm-6 card-wrap">
+    <article class="card {% for cat in post.categories%}{{ cat }} {% endfor %}">
+        <a href="{{ site.baseurl }}{{ post.url }}.html">
+            <img src="{{site.cdn}}work/climate/preloader.svg" data-src="{{site.cdn}}work/projects/{{post.slug}}/cover.jpg">
+            <div class="content">
+                <small>
+                    {% capture test_cat %}{{ post.categories[3] }}{% endcapture %}
+                    {% if test_cat !='' %}
+                        {{ post.categories[3] | replace: "-", " " }}
+                    {% else %}
+                        {{ post.categories[2] | replace: "-", " " }}
+                    {% endif %}
+                    {% capture test_cat %}{{ post.categories[2] }}{% endcapture %}
+                    {% if test_cat !='' %}
+                    {% else %}
+                        {{ post.categories[1] | replace: "-", " " }}
+                    {% endif %}
+                </small>
+                <h3>{{ post.title | truncate: 50, '...' }}</h3>
+            </div>
+        </a>
+    </article>
+</div>

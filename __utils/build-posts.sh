@@ -12,8 +12,8 @@ build_post()
 
 build_post_design()
 {
-  json=$(cat ./_data/projects-design.json | jq -r '.[]| @base64' )
-  dist="../design/_posts"
+  json=$(cat ./_data/projects.json | jq -r '.[]| @base64' )
+  dist="../journal/design/_posts"
   rm -rf ./design/_posts/*.*
   build_post
 }
@@ -33,7 +33,7 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Build Work")
-          sh ./_scripts/build-work.sh   
+          sh ./__utils/build-work.sh   
         ;;
         "Build All Projects")
           build_post_art

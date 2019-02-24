@@ -1,10 +1,29 @@
 ---
-layout: site/default
+layout: site/sidebar
 title: Work
+script: about
 ---
+<div class="box">
+  <div class="row">
+  {% for post in site.posts %}
+    {% if post.categories contains 'work' %}
+      {% include components/containers/card/post.html %}
+    {% endif %}
+  {% endfor %}
+  </div>  
+<div>
 
-<br><br>
-{% include components/content/work/portfolio.html %}
-<br><br><br><br>
-{% include components/content/bio/profile.html  %}
+{% comment %} <ul>
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first |replace: "-", " " }}</a>
+    <ul>
+    {% for post in category.last %}
+      <li><a href="{{ post.url }}.html">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul> {% endcomment %}
+
+
 
