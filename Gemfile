@@ -2,6 +2,7 @@ source "https://rubygems.org"
 gem 'activesupport'
 gem "rake"
 gem "jekyll"
+gem "jekyll-paginate"
 group :jekyll_plugins do
    gem "jekyll-feed"
 end

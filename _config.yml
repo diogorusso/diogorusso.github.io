@@ -7,6 +7,10 @@ sass:
   sass_dir: _includes/
   style: :compressed
 
+paginate: 5
+plugins: [jekyll-paginate]
+
+paginate_path: "/work/page:num/"
 
 # Info
 author: "Diogo Russo"
