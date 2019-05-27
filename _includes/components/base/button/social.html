@@ -1,8 +1,0 @@
-<div class="btns-social">
-        {% for item in site.social %}
-                <a href="{{item.url}}"  target="_blank" rel="noopener"  aria-label="{{item.title}}">
-                        {% assign title = item.title %}
-                        {% include img/svg/social/{{title}}.svg %}
-                </a>
-        {% endfor %}
-</div>

@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 gem 'activesupport'
 gem "rake"
-gem "jekyll"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
 gem "jekyll-paginate"
-group :jekyll_plugins do
-   gem "jekyll-feed"
-end
-
+gem 'jekyll-gist'
+gem "jekyll-feed"
+gem 'jekyll-redirect-from'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 

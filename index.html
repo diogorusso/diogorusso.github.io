@@ -1,29 +1,31 @@
 ---
-layout: site/default
-script: about
-title: About
-cover: "about/cover.jpg"
+layout: default
 ---
-{% comment %} {% include containers/hero/minimal.html
-title="hi, I'm Diogo Russo"
-subtitle="UX & Product Design"
-legend="working at climate.com"
-anchor="bio"
-%} {% endcomment %}
-{% include components/containers/hero/minimal.html
-        title="hi, I'm Diogo Russo"
-        subtitle="UX & Product Design"
-        anchor="bio"
-%}
-<a id="bio"></a>
-<div class="bio">
-        <div class="bio-wrap">
-                {% include components/content/bio/profile.html %}
-                {% include components/content/bio/description.html %}
-        </div>
-</div>
 
-{% include components/content/work/climate.html %}
-{% include components/content/work/featured.html %}
-<br/><br/><br/><br/><br/>
-{% include components/content/design/process.html %}
+{% comment %} scripts: instagram {% endcomment %}
+{% include components/hero/minimal.html
+  title= "<span class=\"hide-sm\">Diogo Russo</span><span class=\"hide-md hide-lg hide-xl show-xs\">Diogo<br>Russo</span>"
+  subtitle="UX & Product Design"
+  legend= "combining design, technology and agriculture to help farmers feed the world at  <strong>climate.com</strong>"
+  bg_color="bg-light"
+  wrap="wrap-large"
+  txt_align="txt-left"
+  txt_color="txt-dark"
+  title_size="jumbo"
+  scroll_arrow="false"
+  anchor="journal"
+%}
+
+<a id="journal"></a>
+{% include content/bio/bio.html %}
+{% include content/process/process.html %}
+{% include featured.html %}
+{% comment %} {% include content/journal/posts.html %} {% endcomment %}
+
+
+
+
+
+
+
+

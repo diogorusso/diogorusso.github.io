@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+gemfiles = [ 'Gemfile']
+gemfiles.each do |gemfile|
+  instance_eval File.read(gemfile)
+end
+gem "diogorusso.jekyll.theme", path: "../diogorusso.jekyll.theme"

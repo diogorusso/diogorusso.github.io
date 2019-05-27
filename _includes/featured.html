@@ -1,0 +1,81 @@
+<div class="row portfolio-title">
+                <div class="col-xs-12">
+                        <h2>Work & Play</h2>
+                        <h3>
+                                I'm a Product Designer at the Climate Corporation, San Francisco. 
+                                I was the co-founder and creative-director of 2 design studios in Brazil. 
+                                I'm a MBA in Design Strategy. 
+                                I also draw and make art.
+                        </h3>
+                </div>
+        </div>
+
+<div class="projects-climate">     
+        {% capture img_sa %}
+         {{ site.cdn }}{{ include.version }}featured/sa.jpg
+        {% endcapture %}
+        
+        {% include components/card/large.html
+                type="slider"
+                img=img_sa
+                url="https://work.diogorusso.com/predictive-seed-placement-recommendations" 
+                title="Predictive Seed Recommendations"
+                buttonLabel="Read Case"
+                categories="UX + Product Design"
+        %}
+
+        {% capture img_sync %}
+                {{ site.cdn }}{{ include.version }}featured/sync.jpg
+        {% endcapture %}
+        {% include components/card/large.html 
+                type="slider"
+                img=img_sync
+                url="https://work.diogorusso.com/data-mule-for-large-farming-operations" 
+                title="Data Mule for Large Farming Operations"
+                buttonLabel="Read Case"
+                categories="UX + Product Design" 
+        %}
+
+        {% capture img_rx %}
+                {{ site.cdn }}{{ include.version }}featured/rx.jpg
+        {% endcapture %}
+        {% include components/card/large.html 
+                type="slider"
+                url="https://work.diogorusso.com/data-driven-fertility-prescriptions" 
+                title="Advanced Seed Prescriptions"
+                categories="UX + Product Design"
+                buttonLabel="Read Case"  
+                img=img_rx 
+        %}
+        {% capture img_dmba %}
+                {{ site.cdn }}{{ include.version }}featured/cca.jpg
+        {% endcapture %}
+        {% include components/card/large.html 
+                type="slider"
+                url="https://work.diogorusso.com/design-strategy" 
+                title="Strategy and Experience Design"
+                categories="MBA Design Strategy at CCA"
+                buttonLabel="View Projects" 
+                img=img_dmba 
+        %}
+        {% capture img_creative_dir %}
+                {{ site.cdn }}{{ include.version }}featured/br.jpg
+        {% endcapture %}
+        {% include components/card/large.html
+                type="slider" 
+                url="https://work.diogorusso.com/creative-direction" 
+                title="Graphics, Interaction & Motion Design"
+                categories="Creative Direction"
+                buttonLabel="View Projects"
+                img=img_creative_dir 
+        %}
+        {% capture img_art %}
+                {{ site.cdn }}{{ include.version }}featured/art.jpg
+        {% endcapture %}
+        {% include components/card/large.html 
+                url="https://work.diogorusso.com/illustration-art" 
+                title="Illustration & Artwork"
+                buttonLabel="Explore" 
+                image=img_art 
+        %}
+</div>

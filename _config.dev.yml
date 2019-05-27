@@ -1,4 +1,6 @@
 url: ""
-baseurl: "https://localhost:1818"
-cdn: /assets/
-static: /assets/
+baseurl: ""
+cdn: /assets/cdn/
+static: /assets/cdn
+remote_theme: ""
+theme: "diogorusso.jekyll.theme"
