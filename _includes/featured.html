@@ -10,20 +10,18 @@
                 </div>
         </div>
 
-<div class="projects-climate">     
-        {% capture img_sa %}
-         {{ site.cdn }}{{ include.version }}featured/sa.jpg
+<div class="projects-climate">
+        {% capture img_rx %}
+                {{ site.cdn }}{{ include.version }}featured/rx-ad.jpg
         {% endcapture %}
-        
-        {% include components/card/large.html
+        {% include components/card/large.html 
                 type="slider"
-                img=img_sa
-                url="https://work.diogorusso.com/predictive-seed-placement-recommendations" 
-                title="Predictive Seed Recommendations"
-                buttonLabel="Read Case"
+                url="https://work.diogorusso.com/data-driven-fertility-prescriptions" 
+                title="Advanced Seed Prescriptions"
                 categories="UX + Product Design"
+                buttonLabel="Read Case"  
+                img=img_rx 
         %}
-
         {% capture img_sync %}
                 {{ site.cdn }}{{ include.version }}featured/sync.jpg
         {% endcapture %}
@@ -35,17 +33,16 @@
                 buttonLabel="Read Case"
                 categories="UX + Product Design" 
         %}
-
-        {% capture img_rx %}
-                {{ site.cdn }}{{ include.version }}featured/rx-ad.jpg
+        {% capture img_sa %}
+         {{ site.cdn }}{{ include.version }}featured/sa.jpg
         {% endcapture %}
-        {% include components/card/large.html 
+        {% include components/card/large.html
                 type="slider"
-                url="https://work.diogorusso.com/data-driven-fertility-prescriptions" 
-                title="Advanced Seed Prescriptions"
+                img=img_sa
+                url="https://work.diogorusso.com/predictive-seed-placement-recommendations" 
+                title="Predictive Seed Recommendations"
+                buttonLabel="Read Case"
                 categories="UX + Product Design"
-                buttonLabel="Read Case"  
-                img=img_rx 
         %}
         {% capture img_dmba %}
                 {{ site.cdn }}{{ include.version }}featured/cca_dmba.jpg
