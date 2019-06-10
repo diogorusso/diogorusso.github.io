@@ -1,0 +1,32 @@
+<div class="box">
+        <div class="portfolio-title" style="margin-top:0;">
+                <h2>  Journal ✌️ </h2>
+                <h3> Ideas ・ Sketches ・ Shots</h3>
+        </div>
+
+        <div class="row">
+                {% capture img_coca %}
+                  https://res.cloudinary.com/diogorusso/image/upload/v1521917471/work/Coca-Cola_FWC_14-w624h351.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
+                        title="World Cup Brazil" 
+                        category="Creative Direction, Film, Photography" 
+                        image=img_coca 
+                %}
+                {% capture img_lpc %}
+                  {{ site.cdn }}{{ include.version }}featured/cca_dmba-4.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/launchpad" 
+                        title="LaunchPad UX" 
+                        category="UI/UX, Product Design" 
+                        image=img_lpc 
+                %}
+        </div>
+        
+        <div class="more-projects" style="text-align:center;margin:1rem 0 4rem;">
+                <a href="http://work.diogorusso.com/" class="button">explore all projects</a>
+        </div>
+        
+</div>
