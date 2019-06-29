@@ -6,7 +6,7 @@
         </div>
 
 <div class="projects-climate">
-        {% comment %} {% capture img_rx %}
+        {% capture img_rx %}
                 {{ site.cdn }}{{ include.version }}featured/rx-ad-2.jpg
         {% endcapture %}
         {% include components/card/large.html 
@@ -15,7 +15,7 @@
                 categories="UX + Product Design"
                 buttonLabel="Read Case"  
                 img=img_rx 
-        %} {% endcomment %}
+        %}
         {% capture img_sync %}
                 {{ site.cdn }}{{ include.version }}featured/sync-3.jpg
         {% endcapture %}
