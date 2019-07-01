@@ -1,35 +1,53 @@
 <div class="box">
-        <div class="portfolio-title" style="margin-top:3rem;">
-                <h2>More Work & Play</h2>
-                <h3> Strategy Design ・ Creative Direction ・ Artwork</h3>
+        <div class="portfolio-title hide-sm" style="margin-top:3rem;">
+                <h2>More Work...</h2>
+                {% comment %} <h3> Strategy Design ・ Creative Direction ・ Artwork</h3> {% endcomment %}
         </div>
 
         <div class="row">
                 {% capture img_coca %}
+                  {{ site.cdn }}{{ include.version }}featured/rx-ad-2.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/data-driven-fertility-prescriptions" 
+                        title="Advanced Seed Prescriptions" 
+                        categories="Product Design" 
+                        img=img_coca 
+                %}
+                {% capture img_lpc %}
                   {{ site.cdn }}{{ include.version }}featured/br.jpg
                 {% endcapture %}
                 {% include components/card/portfolio.html 
                         url="https://work.diogorusso.com/creative-direction" 
                         title="Graphics, Interaction & Motion" 
                         categories="Creative Direction" 
-                        img=img_coca 
-                %}
-                {% capture img_lpc %}
-                  {{ site.cdn }}{{ include.version }}featured/cca_dmba-4.jpg
-                {% endcapture %}
-                {% include components/card/portfolio.html 
-                        url="https://work.diogorusso.com/design-strategy" 
-                        title="MBA Design Strategy at CCA" 
-                        categories="Design Thinking & Research" 
                         img=img_lpc 
                 %}
                 {% capture img_foodtopia %}
-                  {{ site.cdn }}{{ include.version }}featured/notebook.jpg
+                  {{ site.cdn }}{{ include.version }}featured/lpc.jpg
                 {% endcapture %}
                 {% include components/card/portfolio.html 
-                        url="https://www.diogorusso.com/journal" 
-                        title="Toolkit, Ideas & Learning" 
-                        categories="Design + Code" 
+                        url="https://work.diogorusso.com/launchpad" 
+                        title="Lean Innovation Platform" 
+                        categories="Visual + UX Design" 
+                        img=img_foodtopia 
+                %}
+                {% capture img_kenner %}
+                  {{ site.cdn }}{{ include.version }}featured/babs.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/bike-share-market-insights" 
+                        title="Bike Share Market Insights" 
+                        categories="MBA Design Strategy" 
+                        img=img_kenner
+                %}
+                {% capture img_foodtopia %}
+                  {{ site.cdn }}{{ include.version }}featured/sesc.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/escola-sesc-id" 
+                        title="Sesc School Brand" 
+                        categories="Graphic Design" 
                         img=img_foodtopia 
                 %}
                 {% capture img_kenner %}
