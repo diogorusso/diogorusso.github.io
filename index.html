@@ -1,35 +1,29 @@
 ---
 layout: default
 title: About
+scripts: about
 ---
 
 {% comment %} scripts: instagram {% endcomment %}
 
 {% include components/hero/minimal.html
   title= "<span class=\"hide-sm\">Diogo Russo</span><span class=\"hide-md hide-lg hide-xl show-xs\">Diogo<br>Russo</span>"
-  subtitle="UX & Product Design"
-  legend= "combining design, technology and agriculture to help farmers feed the world at  <strong>climate.com</strong>"
-  bg_color="bg-light"
-  wrap="wrap-large"
-  txt_align="txt-left"
-  txt_color="txt-dark"
+  subtitle="<span class=\"hide-sm\">UX & Product Design</span> <span class=\"hide-md hide-lg hide-xl show-xs\">UX & Product<br>Design</span>"
+  legend= "Combining design, technology and agriculture to help farmers feed the world at  <span class=\"weight-700\">climate.com</span>, San Francisco. Co-Founder and Creative-Director of a design studio in Brazil. I'm a MBA in Design Strategy at California College of the Arts. I also draw and make art."
+  bg_color="bg-dark"
+  txt_color="txt-light"
   scroll_arrow="false"
-  anchor="journal"
+  anchor="about"
 %}
 
-<a id="journal"></a>
+<a id="about"></a>
 {% include content/bio/bio.html %}
-{% include content/process/process.html %}
+{% comment %} {% include content/process/process.html %} {% endcomment %}
 {% include summary.html %}
-{% include featured.html %}
-{% comment %} 
-{% include artwork.html %}
-{% include content/journal/posts.html %} {% endcomment %}
 
-
-
-
-
-
-
-
+{% comment %}
+  {% include featured.html %}
+  {% include posts.html %}
+  {% include artwork.html %}
+  {% include content/journal/posts.html %}
+{% endcomment %}

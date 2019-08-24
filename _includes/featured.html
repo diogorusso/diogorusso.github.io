@@ -1,10 +1,49 @@
 <div class="box">
         <div class="portfolio-title hide-sm" style="margin-top:3rem;">
-                <h2>More Work...</h2>
+                <h1>More Work...</h1>
                 {% comment %} <h3> Strategy Design ・ Creative Direction ・ Artwork</h3> {% endcomment %}
         </div>
 
         <div class="row">
+                {% capture url_foodtopia %}
+                        {{ site.baseurl }}/lab/ux-toolkit
+                {% endcapture %}
+                {% capture img_rx %}
+                        {{ site.cdn }}{{ include.version }}strategy-kit.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url=url_foodtopia 
+                        title="Strategy Design Toolkit"
+                        categories="UX + Product Design"
+                        buttonLabel="Read Case"  
+                        img=img_rx 
+                %}
+                {% capture url_foodtopia %}
+                        {{ site.baseurl }}/lab/prototyping
+                {% endcapture %}
+                {% capture img_sync %}
+                        {{ site.cdn }}{{ include.version }}ui.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        img=img_sync
+                        url="https://work.diogorusso.com/data-mule-for-large-farming-operations" 
+                        title="UI Prototyping Experiments"
+                        buttonLabel="Read Case"
+                        categories="Collection of Shots + Resources" 
+                %}
+                {% capture url_foodtopia %}
+                        {{ site.baseurl }}lab/ux-toolkit
+                {% endcapture %}
+                {% capture img_sa %}
+                {{ site.cdn }}{{ include.version }}sketchbook.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html
+                        img=img_sa
+                        url="https://work.diogorusso.com/predictive-seed-placement-recommendations" 
+                        title="Creative Notes, Sketches + Doodles"
+                        buttonLabel="Read Case"
+                        categories="Digital Sketchbook"
+                %}
                 {% capture img_coca %}
                   {{ site.cdn }}{{ include.version }}featured/rx-ad-2.jpg
                 {% endcapture %}
@@ -13,16 +52,8 @@
                         title="Advanced Seed Prescriptions" 
                         categories="Product Design" 
                         img=img_coca 
-                %}
-                {% capture img_lpc %}
-                  {{ site.cdn }}{{ include.version }}featured/br.jpg
-                {% endcapture %}
-                {% include components/card/portfolio.html 
-                        url="https://work.diogorusso.com/creative-direction" 
-                        title="Graphics, Interaction & Motion" 
-                        categories="Creative Direction" 
-                        img=img_lpc 
-                %}
+                %} 
+                
                 {% capture img_foodtopia %}
                   {{ site.cdn }}{{ include.version }}featured/lpc.jpg
                 {% endcapture %}
@@ -41,14 +72,14 @@
                         categories="MBA Design Strategy" 
                         img=img_kenner
                 %}
-                {% capture img_foodtopia %}
-                  {{ site.cdn }}{{ include.version }}featured/sesc.jpg
+                {% capture img_lpc %}
+                  {{ site.cdn }}{{ include.version }}featured/br.jpg
                 {% endcapture %}
                 {% include components/card/portfolio.html 
-                        url="https://work.diogorusso.com/escola-sesc-id" 
-                        title="Sesc School Brand" 
-                        categories="Graphic Design" 
-                        img=img_foodtopia 
+                        url="https://work.diogorusso.com/creative-direction" 
+                        title="Graphics, Interaction & Motion" 
+                        categories="Creative Direction" 
+                        img=img_lpc 
                 %}
                 {% capture img_kenner %}
                   {{ site.cdn }}{{ include.version }}featured/art.jpg
@@ -59,6 +90,16 @@
                         categories="Gallery, Projects & Events" 
                         img=img_kenner
                 %}
+                {% comment %} {% capture img_foodtopia %}
+                  {{ site.cdn }}{{ include.version }}featured/sesc.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/escola-sesc-id" 
+                        title="Sesc School Brand" 
+                        categories="Graphic Design" 
+                        img=img_foodtopia 
+                %} {% endcomment %}
+                
         </div>
         
         <div class="more-projects" style="text-align:center;margin:1rem 0 4rem;">

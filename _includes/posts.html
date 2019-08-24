@@ -1,0 +1,41 @@
+<div class="box" style="margin:9rem auto;">
+        {% comment %} <div class="portfolio-title hide-sm" style="margin-top:3rem;">
+                <h1>Journal</h1>
+                <h3> Strategy Design ・ Creative Direction ・ Artwork</h3>
+        </div> {% endcomment %}
+
+        <div class="row">
+                {% capture img_coca %}
+                  {{ site.cdn }}{{ include.version }}featured/rx-ad-2.jpg
+                {% endcapture %}
+                {% include components/card/featured.html 
+                        url="https://work.diogorusso.com/data-driven-fertility-prescriptions" 
+                        title="Journal" 
+                        categories="Product Design" 
+                        img=img_coca 
+                        columns=4
+                %}
+                {% capture img_lpc %}
+                  {{ site.cdn }}{{ include.version }}featured/br.jpg
+                {% endcapture %}
+                {% include components/card/featured.html 
+                        url="https://work.diogorusso.com/creative-direction" 
+                        title="Toolkit" 
+                        categories="Creative Direction" 
+                        img=img_lpc
+                        columns=4 
+                %}
+                {% capture img_foodtopia %}
+                  {{ site.cdn }}{{ include.version }}featured/lpc.jpg
+                {% endcapture %}
+                {% include components/card/featured.html 
+                        url="https://work.diogorusso.com/launchpad" 
+                        title="Lab" 
+                        categories="Visual + UX Design" 
+                        img=img_foodtopia
+                        columns=4 
+                %}
+
+        </div>
+        
+</div>
