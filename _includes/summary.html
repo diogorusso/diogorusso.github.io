@@ -29,7 +29,7 @@
                 url="https://work.diogorusso.com/data-mule-for-large-farming-operations" 
                 title="Data Mule for Large Farming Operations"
                 buttonLabel="Read Case"
-                categories="UX + Product Design" 
+                categories="Enabling Farmers to Collect Field Data Through P2P Wireless Connections" 
         %}{% capture img_sa %}
          {{ site.cdn }}{{ include.version }}featured/sa.jpg
         {% endcapture %}
@@ -39,7 +39,7 @@
                 url="https://work.diogorusso.com/predictive-seed-placement-recommendations" 
                 title="Predictive Seed Recommendations"
                 buttonLabel="Read Case"
-                categories="UX + Product Design"
+                categories="Pushing the Limits of Technology to Streamline Planting and Increase Yield"
         %}
         {% capture img_rx %}
                 {{ site.cdn }}{{ include.version }}featured/rx-ad-2.jpg
@@ -47,7 +47,7 @@
         {% include components/card/large.html 
                 url="https://work.diogorusso.com/data-driven-fertility-prescriptions" 
                 title="Advanced Seed Prescriptions"
-                categories="UX + Product Design"
+                categories="Using Historical Field Data to Help Farmers Optimize Seed Investment"
                 buttonLabel="Read Case"  
                 img=img_rx
                 bg_color="#e27ada" 
@@ -85,24 +85,36 @@
         {% endcapture %}
         {% include components/card/large.html 
                 url="https://work.diogorusso.com/launchpad" 
-                        title="Lean Innovation Platform" 
-                categories="UX + Strategy Design"
-                buttonLabel="Go to Project" 
+                        title="Launchpad Central Platform" 
+                categories="Lean Innovation Management and Market Validation Platform"
+                buttonLabel="View Project" 
                 img=img_dmba
                 bg_color="#80f4df" 
         %}
-        {% comment %} {% capture img_creative_dir %}
+        {% capture img_creative_dir %}
                 {{ site.cdn }}{{ include.version }}featured/babs.jpg
+        {% endcapture %}
+        {% include components/card/large.html
+                url="https://work.diogorusso.com/bike-share-market-insights" 
+                title="Bay Area Bike Share"
+                categories="User Research, Market Landscape, Strategic Insights and Recommendations"
+                buttonLabel="View Project"
+                img=img_creative_dir
+                bg_color="#fa6f87"
+                 
+        %}
+        {% capture img_creative_dir %}
+                {{ site.cdn }}{{ include.version }}featured/br.jpg
         {% endcapture %}
         {% include components/card/large.html
                 url="https://work.diogorusso.com/creative-direction" 
                 title="Graphics, Interaction & Motion Design"
-                categories="Creative Direction"
-                buttonLabel="Go to Projects"
+                categories="Co-Founder and Creative Director of a Design Studio in Brazil"
+                buttonLabel="View Projects"
                 img=img_creative_dir
-                bg_color="#fa6f87"
+                bg_color="#db404f"
                  
-        %} {% endcomment %}
+        %}
         {% capture img_kenner %}
           {{ site.cdn }}{{ include.version }}featured/art.jpg
         {% endcapture %}
@@ -113,17 +125,5 @@
                 buttonLabel="Go to Artwork" 
                 img=img_kenner
                 bg_color="#7392e8"
-        %}
-        {% capture img_creative_dir %}
-                {{ site.cdn }}{{ include.version }}featured/br.jpg
-        {% endcapture %}
-        {% include components/card/large.html
-                url="https://work.diogorusso.com/creative-direction" 
-                title="Graphics, Interaction & Motion Design"
-                categories="Creative Direction"
-                buttonLabel="Go to Projects"
-                img=img_creative_dir
-                bg_color="#db404f"
-                 
         %}
 </div>
