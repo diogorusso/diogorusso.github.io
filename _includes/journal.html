@@ -1,0 +1,55 @@
+<div class="box" style="margin-top:6rem;">
+
+        <div class="row">
+                {% capture img_kenner %}
+                  {{ site.cdn }}{{ include.version }}sec1.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url=url_kenner 
+                        title="Artwork" 
+                        categories="Gallery + Projects" 
+                        img=img_kenner
+                %}
+                {% capture img_foodtopia %}
+                  {{ site.cdn }}{{ include.version }}sec4.jpg
+                {% endcapture %}
+                {% capture url_foodtopia %}
+                  {{ site.baseurl }}/ideas
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url=url_foodtopia 
+                        title="Journal" 
+                        categories="Inspiration, Quotes + Notes" 
+                        img=img_foodtopia 
+                %}
+                {% capture img_kenner %}
+                  {{ site.cdn }}{{ include.version }}sec2.jpg
+                {% endcapture %}
+                {% capture url_kenner %}
+                  {{ site.baseurl }}/learn
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url=url_kenner 
+                        title="Learn" 
+                        categories="Design, Data & Dev" 
+                        img=img_kenner
+                %}
+                {% capture url_foodtopia %}
+                  {{ site.baseurl }}/lab
+                {% endcapture %}
+                {% capture img_foodtopia %}
+                  {{ site.cdn }}{{ include.version }}sec3.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url=url_foodtopia 
+                        title="Lab" 
+                        categories="Projects + Experiments" 
+                        img=img_foodtopia 
+                %}
+                {% capture url_kenner %}
+                  {{ site.baseurl }}/essays/
+                {% endcapture %}
+        </div>
+       
+        
+</div>

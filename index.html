@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-scripts: about
+scripts: about instagram
 ---
 
 {% comment %} scripts: instagram {% endcomment %}
@@ -14,15 +14,40 @@ scripts: about
   legend= "Combining design, technology, and agriculture to help farmers feed the world at  <span class=\"weight-700\">climate.com</span>, San Francisco. Co-Founder and Creative Director of Estúdio Berinjela, a Design Studio in Brazil. I'm an MBA in Design Strategy. I like to play with Data &  Codding. I also Draw and make Art."
   bg_color="bg-dark"
   txt_color="txt-light"
-  scroll_arrow="false"
+  scroll_arrow="true"
   anchor="about"
 %}
-
 
 <a id="about"></a>
 {% include content/bio/bio.html %}
 {% comment %} {% include content/process/process.html %} {% endcomment %}
 {% include summary.html %}
+
+
+{% comment %} <div class="row portfolio-title">
+        <div class="col-xs-12">
+          <h1 class="squiggle">Work & Have Fun</h1>
+          <h3>Artwork + Design Lab + Journal</h3>
+          <br/>
+        </div>
+</div> {% endcomment %}
+{% comment %} {% include journal.html %}
+
+
+<div class="row portfolio-title">
+        <div class="col-xs-12">
+          <h1 class="squiggle">Digital Sketchbook</h1>
+          <h3>Random Shots</h3>
+          <br/>
+        </div>
+</div> {% endcomment %}
+{% comment %} 
+<div class="row box section spacing">
+  <div class="col-xs-12">
+    {% include api/instagram/instagram.html %}
+  </div>
+</div> {% endcomment %}
+
 
 
 
@@ -32,5 +57,3 @@ scripts: about
   {% include artwork.html %}
   {% include content/journal/posts.html %}
 {% endcomment %}
-
-

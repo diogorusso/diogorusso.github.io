@@ -1,13 +1,21 @@
-<div class="row portfolio-title">
+<section style="padding:6rem 0;background:url('/assets/cdn/transp_bg.png')repeat;">
+<div class="row" style="max-width:450px; margin:3rem auto;text-align:center;">
                 <div class="col-xs-12">
-                      <h1>I help businesses, individuals and communities craft meaningful<br>
+                      <h1>Solving <b>wicked problems</b> through brute for design. I help businesses, individuals and communities craft <b>meaningful</b><br>
                     <span class="txt-rotate" data-period="1000" data-rotate="[ &quot;PRODUCTS&quot;, &quot;EXPERIENCES&quot;,&quot;MEMORIES&quot;]"><span class="wrap">PRODUCTS</span></span></h1>
                       <br/><br/>
                       <a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" class="button" target="_blank" rel="noopener">View Full Bio</a>
                       {% comment %} <h2>I'm a Product Designer at the Climate Corporation, San Francisco. I was the creative-director and co-founder of a design studio in Brazil. I'm a MBA in Design Strategy. I also draw and make art.</h2> {% endcomment %}
                 </div>
         </div>
-
+</section>
+<div class="row portfolio-title" style="margin: 15rem auto 0rem">
+        <div class="col-xs-12">
+                <h1 class="squiggle">Digital Tools for Farmers</h1>
+                <h3>UX & Product Design at CLIMATE.COM</h3>
+                <br/>
+        </div>
+</div>
 
 {% comment %} <div class="row portfolio-title">
                 <div class="col-xs-12">
@@ -30,13 +38,14 @@
                 title="Data Mule for Large Farming Operations"
                 buttonLabel="Read Case"
                 categories="Enabling Farmers to Collect Field Data Through P2P Wireless Connections" 
-        %}{% capture img_sa %}
+        %}
+        {% capture img_sa %}
          {{ site.cdn }}{{ include.version }}featured/sa.jpg
         {% endcapture %}
         {% include components/card/large.html
                 img=img_sa
                 bg_color="#a9dd54"
-                url="https://work.diogorusso.com/predictive-seed-placement-recommendations" 
+                url="https://work.diogorusso.com/predictive-seed-recommendations" 
                 title="Predictive Seed Recommendations"
                 buttonLabel="Read Case"
                 categories="Pushing the Limits of Technology to Streamline Planting and Increase Yield"
@@ -80,6 +89,17 @@
                 buttonLabel="View More"
                 categories="Shots + Resources" 
         %} {% endcomment %}
+
+
+
+        <div class="row portfolio-title">
+        <div class="col-xs-12">
+                <h1 class="squiggle">Strategy + Design</h1>
+                <h3>Strategic Insights + Creative Direction</h3>
+                <br/>
+        </div>
+</div>
+
         {% capture img_dmba %}
                 {{ site.cdn }}{{ include.version }}featured/lpc.jpg
         {% endcapture %}
@@ -115,7 +135,7 @@
                 bg_color="#db404f"
                  
         %}
-        {% capture img_kenner %}
+        {% comment %} {% capture img_kenner %}
           {{ site.cdn }}{{ include.version }}featured/art.jpg
         {% endcapture %}
         {% include components/card/large.html 
@@ -125,5 +145,5 @@
                 buttonLabel="Go to Artwork" 
                 img=img_kenner
                 bg_color="#7392e8"
-        %}
+        %} {% endcomment %}
 </div>

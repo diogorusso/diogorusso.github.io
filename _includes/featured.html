@@ -31,7 +31,7 @@
                         buttonLabel="Read Case"
                         categories="Collection of Shots + Resources" 
                 %}
-                {% capture url_foodtopia %}
+               {% capture url_foodtopia %}
                         {{ site.baseurl }}lab/ux-toolkit
                 {% endcapture %}
                 {% capture img_sa %}
@@ -44,7 +44,18 @@
                         buttonLabel="Read Case"
                         categories="Digital Sketchbook"
                 %}
-                {% capture img_coca %}
+                {% capture img_kenner %}
+                        {{ site.cdn }}{{ include.version }}featured/art.jpg
+                {% endcapture %}
+                {% include components/card/portfolio.html 
+                        url="https://work.diogorusso.com/illustration-art" 
+                        title="Illustration & Art" 
+                        categories="Image Creation, Public Instalations, Events  and Collaborative Explorations"
+                        buttonLabel="Go to Artwork" 
+                        img=img_kenner
+                        bg_color="#7392e8"
+                %}
+                {% comment %} {% capture img_coca %}
                   {{ site.cdn }}{{ include.version }}featured/rx-ad-2.jpg
                 {% endcapture %}
                 {% include components/card/portfolio.html 
@@ -89,7 +100,7 @@
                         title="Illustration & Art" 
                         categories="Gallery, Projects & Events" 
                         img=img_kenner
-                %}
+                %} {% endcomment %}
                 {% comment %} {% capture img_foodtopia %}
                   {{ site.cdn }}{{ include.version }}featured/sesc.jpg
                 {% endcapture %}
