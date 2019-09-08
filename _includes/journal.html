@@ -5,9 +5,9 @@
                   {{ site.cdn }}{{ include.version }}sec1.jpg
                 {% endcapture %}
                 {% include components/card/portfolio.html 
-                        url=url_kenner 
+                        url="https://work.diogorusso.com/illustration-art" 
                         title="Artwork" 
-                        categories="Gallery + Projects" 
+                        categories="Image Creation, Public Instalations, Events  and Collaborative Explorations" 
                         img=img_kenner
                 %}
                 {% capture img_foodtopia %}
@@ -17,12 +17,12 @@
                   {{ site.baseurl }}/ideas
                 {% endcapture %}
                 {% include components/card/portfolio.html 
-                        url=url_foodtopia 
+                        url="https://www.notion.so/Journal-5c0230c00e6e43c59140861bac1d421f" 
                         title="Journal" 
-                        categories="Inspiration, Quotes + Notes" 
+                        categories="Ideas, resources. methods and tools to bring ideas to life and make things happen. " 
                         img=img_foodtopia 
                 %}
-                {% capture img_kenner %}
+                {% comment %} {% capture img_kenner %}
                   {{ site.cdn }}{{ include.version }}sec2.jpg
                 {% endcapture %}
                 {% capture url_kenner %}
@@ -48,7 +48,7 @@
                 %}
                 {% capture url_kenner %}
                   {{ site.baseurl }}/essays/
-                {% endcapture %}
+                {% endcapture %} {% endcomment %}
         </div>
        
         

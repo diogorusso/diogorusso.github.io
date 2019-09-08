@@ -1,7 +1,7 @@
 <section style="padding:6rem 0;background:url('/assets/cdn/transp_bg.png')repeat;">
-<div class="row" style="max-width:535px; margin:3rem auto;text-align:center; padding:0 1.5rem;">
+<div class="row" style="max-width:590px; margin:3rem auto;text-align:center; padding:0 1.5rem;">
                 <div class="col-xs-12">
-                      <h1>Solving wicked problems through brute force design.<br class="hide-md hide-lg hide-xl"/> I help businesses, individuals and communities craft meaningful<br>
+                      <h1>Solving wicked problems through user reasearch and  brute force design. I help businesses, individuals and communities craft meaningful<br>
                     <span class="txt-rotate" data-period="1000" data-rotate="[ &quot;PRODUCTS&quot;, &quot;EXPERIENCES&quot;,&quot;MEMORIES&quot;]"><span class="wrap">PRODUCTS</span></span></h1>
                       <br/><br/>
                       <a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" class="button" target="_blank" rel="noopener">View Full Bio</a>
@@ -9,7 +9,7 @@
                 </div>
         </div>
 </section>
-<div class="row portfolio-title" style="margin: 9rem auto 0rem">
+<div class="row portfolio-title" style="margin: 9rem auto 3rem">
         <div class="col-xs-12">
                 <h1 class="squiggle">Digital Tools for Farmers</h1>
                 <h3>UX & Product Design at CLIMATE.COM</h3>
@@ -94,24 +94,52 @@
 
         <div class="row portfolio-title">
         <div class="col-xs-12">
-                <h1 class="squiggle">Design + Strategy</h1>
-                <h3>Strategic Insights + Creative Direction</h3>
+                <h1 class="squiggle">More Work ...</h1>
+                {% comment %} <h3>My unique background and diverse skillset give me the ability to combine design + strategy to build products that solve real problems.</h3> {% endcomment %}
                 <br/>
         </div>
 </div>
-
+        {% capture img_dmba %}
+                {{ site.cdn }}{{ include.version }}featured/lpc.jpg,
+                {{ site.cdn }}{{ include.version }}featured/br.jpg,
+                {{ site.cdn }}{{ include.version }}featured/babs.jpg,
+                {{ site.cdn }}{{ include.version }}featured/sesc.jpg
+        {% endcapture %}
+        {% include components/card/large.html
+                type="slider" 
+                url="https://work.diogorusso.com/" 
+                        title="Design Strategy + Creative Direction" 
+                categories="My unique background and diverse skillset give me the ability to combine creativity, design, and strategy to build products that solve real problems."
+                buttonLabel="View More" 
+                img=img_dmba
+                bg_color="#80f4df" 
+        %}
+        {% comment %} {% capture img_dmba %}
+                {{ site.cdn }}{{ include.version }}featured/lpc.jpg,
+                {{ site.cdn }}{{ include.version }}featured/babs.jpg,
+                {{ site.cdn }}{{ include.version }}featured/foodtopia.jpg
+        {% endcapture %}
+        {% include components/card/large.html
+                type="slider" 
+                url="https://work.diogorusso.com/launchpad" 
+                        title="Experience + Strategy Design Projects" 
+                categories="User Research, Strategic Insights & UX Design"
+                buttonLabel="View Projects" 
+                img=img_dmba
+                bg_color="#80f4df" 
+        %}
         {% capture img_dmba %}
                 {{ site.cdn }}{{ include.version }}featured/lpc.jpg
-        {% endcapture %}
-        {% include components/card/large.html 
+        {% endcapture %} {% endcomment %}
+        {% comment %} {% include components/card/large.html 
                 url="https://work.diogorusso.com/launchpad" 
                         title="Launchpad Central Platform" 
                 categories="UX + Visual Design for a Lean Innovation Management and Market Validation Platform"
                 buttonLabel="View Project" 
                 img=img_dmba
                 bg_color="#80f4df" 
-        %}
-        {% capture img_creative_dir %}
+        %} {% endcomment %}
+        {% comment %} {% capture img_creative_dir %}
                 {{ site.cdn }}{{ include.version }}featured/babs.jpg
         {% endcapture %}
         {% include components/card/large.html
@@ -122,19 +150,22 @@
                 img=img_creative_dir
                 bg_color="#fa6f87"
                  
-        %}
-        {% capture img_creative_dir %}
-                {{ site.cdn }}{{ include.version }}featured/br.jpg
+        %} {% endcomment %}
+        {% comment %} {% capture img_creative_dir %}
+                {{ site.cdn }}{{ include.version }}featured/br.jpg,
+                {{ site.cdn }}{{ include.version }}featured/sesc.jpg,
+                {{ site.cdn }}{{ include.version }}featured/art.jpg
         {% endcapture %}
         {% include components/card/large.html
+                type="slider"
                 url="https://work.diogorusso.com/creative-direction" 
-                title="Graphics, Interaction & Motion Design"
+                title="Creative Direction for Graphics & Motion"
                 categories="Co-Founder and Creative Director of Estúdio Berinjela <br/> a Design Studio in Brazil"
                 buttonLabel="View Projects"
                 img=img_creative_dir
                 bg_color="#db404f"
                  
-        %}
+        %} {% endcomment %}
         {% comment %} {% capture img_kenner %}
           {{ site.cdn }}{{ include.version }}featured/art.jpg
         {% endcapture %}
