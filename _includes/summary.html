@@ -1,4 +1,4 @@
-<section style="padding:3rem 0;background:url('/assets/cdn/transp_bg.png')repeat;">
+<section style="padding:6rem 0 0;">
 <div class="row" style="max-width:590px; margin:3rem auto;text-align:center; padding:0 1.5rem;">
                 <div class="col-xs-12">
                       <h1>Solving wicked problems through user research and  <a href="https://www.notion.so/diogorusso/Brute-Force-Design-d6c8460184644936a3e8c29d5a9eb97c" target="_blank" rel="noopener noreferrer">brute force design</a>. I help businesses, individuals and communities craft meaningful<br>
@@ -8,11 +8,11 @@
                       {% comment %} <h2>I'm a Product Designer at the Climate Corporation, San Francisco. I was the creative-director and co-founder of a design studio in Brazil. I'm a MBA in Design Strategy. I also draw and make art.</h2> {% endcomment %}
                 </div>
         </div>
-</section>
+</section>    
 
 <div class="row portfolio-title" style="margin: 9rem auto 3rem">
         <div class="col-xs-12">
-                <h1 class="squiggle">Digital Tools for Farmers</h1>
+                <h1>Digital Tools for Farmers</h1>
                 <h3>UX & Product Design at <a href="https://climate.com/about" target="_blank" rel="noopener noreferrer">CLIMATE.COM</a></h3>
                 <br/>
         </div>
@@ -95,15 +95,29 @@
 
         <div class="row portfolio-title">
         <div class="col-xs-12">
-                <h1 class="squiggle">Previous Work</h1>
-                <h3>My unique background and diverse skillset give me the ability to combine DESIGN + STRATEGY to build products that solve real problems.</h3>
+                <h1>More Work</h1>
+                {% comment %} <h3>STRATEGY + DESIGN</h3> {% endcomment %}
+                {% comment %} <h3>My unique background and diverse skillset give me the ability to combine DESIGN + STRATEGY to build products that solve real problems.</h3> {% endcomment %}
                 <br/>
         </div>
 </div>
-        {% capture img_dmba %}
+
+        {% comment %} {% capture img_dmba %}
                 {{ site.cdn }}{{ include.version }}work2.jpg,
                 {{ site.cdn }}{{ include.version }}work1.jpg,
-                {{ site.cdn }}{{ include.version }}work4.jpg,
+                {{ site.cdn }}{{ include.version }}work4.jpg
+        {% endcapture %}
+        {% include components/card/large.html
+                type="slider" 
+                url="https://work.diogorusso.com/" 
+                        title="Strategy Design" 
+                categories="I was the Co-Founder and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design Strategy."
+                buttonLabel="View More" 
+                img=img_dmba
+                bg_color="#80f4df" 
+        %}
+
+        {% capture img_dmba %}
                 {{ site.cdn }}{{ include.version }}work3.jpg,
                 {{ site.cdn }}{{ include.version }}work14.jpg,
                 {{ site.cdn }}{{ include.version }}work6.jpg
@@ -111,12 +125,38 @@
         {% include components/card/large.html
                 type="slider" 
                 url="https://work.diogorusso.com/" 
-                        title="Design Strategy + Creative Direction" 
+                        title="Creative Direction" 
                 categories="I was the Co-Founder and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design Strategy."
                 buttonLabel="View More" 
                 img=img_dmba
                 bg_color="#80f4df" 
+        %} {% endcomment %}
+         {% capture img_dmba %}
+                {{ site.cdn }}{{ include.version }}work25.mp4
+        {% endcapture %}
+        {% include components/card/large.html
+                url="https://work.diogorusso.com/" 
+                title="Strategy Design + Creative Direction" 
+                categories="I was the Co-Founder and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design Strategy."
+                buttonLabel="View All Work" 
+                img=img_dmba
+                bg_color="#80f4df" 
         %}
+        {% comment %} {% capture img_dmba %}
+                {{ site.cdn }}{{ include.version }}work1.jpg,
+                {{ site.cdn }}{{ include.version }}work3.jpg,
+                {{ site.cdn }}{{ include.version }}work7.jpg,
+                {{ site.cdn }}{{ include.version }}work7.jpg
+        {% endcapture %}
+        {% include components/card/large.html
+                type="slider" 
+                url="https://work.diogorusso.com/" 
+                        title="Strategy Design + Creative Direction" 
+                categories="I was the Co-Founder and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design Strategy."
+                buttonLabel="View More" 
+                img=img_dmba
+                bg_color="#80f4df" 
+        %} {% endcomment %}
         {% comment %} {% capture img_dmba %}
                 {{ site.cdn }}{{ include.version }}featured/lpc.jpg,
                 {{ site.cdn }}{{ include.version }}featured/babs.jpg,

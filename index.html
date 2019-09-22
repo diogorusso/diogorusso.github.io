@@ -1,12 +1,10 @@
 ---
 layout: default
 title: About
-scripts: about
+scripts: about dribbble instagram
 ---
 
 {% comment %} scripts: instagram {% endcomment %}
-
-
 
 {% include components/hero/minimal.html
   title= "<span class=\"hide-sm reveal-text\">Diogo Russo</span><span class=\"hide-md hide-lg hide-xl show-xs\">Diogo<br>Russo</span>"
@@ -14,7 +12,7 @@ scripts: about
   legend= "Combining design, technology, and agriculture to help farmers feed the world at  <span class=\"weight-700\">Climate.com</span>, San Francisco. Co-Founder and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design Strategy.<br class=\"hide-md hide-lg hide-xl\"/> I also draw and make art."
   bg_color="bg-light"
   txt_color="txt-dark"
-  scroll_arrow="true"
+  scroll_arrow="false"
   anchor="about"
 %}
 
@@ -44,6 +42,14 @@ scripts: about
 
 {% include journal.html %}
 
+{% comment %} <div class="row portfolio-title" style="margin: 9rem auto 3rem">
+        <div class="col-xs-12">
+                <h1>Experiments</h1>
+                <h3>Sketches, Doodles & Random Shots</h3>
+                <br/>
+        </div>
+</div>
+{% include api/dribbble/dribbble.html %} {% endcomment %}
 {% comment %} <div class="row box section-spacing">
   <div class="col-xs-12">
     {% include api/instagram/instagram.html %}
@@ -63,3 +69,6 @@ scripts: about
   {% include artwork.html %}
   {% include content/journal/posts.html %}
 {% endcomment %}
+
+
+    
