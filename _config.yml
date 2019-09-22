@@ -20,6 +20,7 @@ keywords: "Diogo Russo, Product Desig, UX Design, Graphic Design, Visual Arts"
 
 # Media CDN (cloudinary)
 cdn: https://res.cloudinary.com/diogorusso/image/upload/
+cdnVideo: https://res.cloudinary.com/diogorusso/video/upload/
 static: https://res.cloudinary.com/diogorusso/raw/upload/
 profile: about/bio/diogorusso.jpg
 
